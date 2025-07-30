@@ -46,7 +46,7 @@
 
 1. **初始化前端**：进入 `frontend` 目录，运行 `npm install` 安装依赖。开发环境可以使用 `npm start` 启动本地服务器，默认监听 `http://localhost:3000`。
 2. **初始化后端**：进入 `backend/src`，使用 `dotnet` 命令创建或还原项目所需的依赖。此仓库中的 `.csproj` 文件引用了 ABP VNext 包，需要在安装好 .NET SDK 和配置好 nuget 源后再执行 `dotnet restore`、`dotnet build`。
-3. **配置环境**：根据您的实际部署环境配置数据库连接、OpenAI API Key、向量数据库等。在生产环境中建议使用 Docker Compose 或 Kubernetes 进行部署，并配置 HTTPS、身份认证等安全设置。
+3. **配置环境**：根据您的实际部署环境配置数据库连接、OpenAI API Key、向量数据库等。在根目录可复制 `.env.example` 为 `.env` 并修改 `REACT_APP_API_BASE_URL`，供前端读取后端地址。在生产环境中建议使用 Docker Compose 或 Kubernetes 进行部署，并配置 HTTPS、身份认证等安全设置。
 
 欢迎根据业务需求对代码结构和逻辑进行扩展和修改。
 
