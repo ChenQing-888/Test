@@ -13,8 +13,8 @@ function ChatWidget() {
   const [inputValue, setInputValue] = useState('');
   const [loading, setLoading] = useState(false);
 
-  // 默认 API 基地址，可根据部署环境修改
-  const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || 'http://localhost:5000';
+  // 从环境变量获取后端 API 地址
+  const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
 
   /**
    * 发送消息到后端
